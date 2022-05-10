@@ -1,0 +1,514 @@
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Orbitron:wght@700&display=swap');
+
+.App {
+    overflow-x: hidden;
+    max-width: 90.125rem;
+    margin: auto;
+}
+// header
+header {
+    .header-wrapper {
+        padding: 29px 20px 0 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+        @include media-breakpoint-down(md) {
+            flex-direction: column;
+            justify-content: center;
+        }
+        @include media-breakpoint-up(xl) {
+            margin: 0 137px 0  133px;
+        }
+
+        .navbar-left-item {
+            margin: 0 11px 0 11px;
+            color: #000000;
+            &:hover{
+                transition: ease-in 0.2s;
+                color: #ffffff;
+            }
+        }
+        .right-nabvar{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .mint-btn {
+            font-family: 'Lato';
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 17px;
+            color: #FFFFFF;
+            padding: 15px 37px 16px 37px;
+            margin-right: 15px;
+            &:hover {
+                background-color: rgba(43, 39, 32, 0.39);
+            }
+        }
+
+        .navbar-right-item{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 42px;
+            height: 42px;
+            margin: 0 3px 0 3px;
+            background-color: rgba(0, 0, 0, 0.09);
+            border-radius: 100%;
+            &:hover {
+                background-color: rgba(43, 39, 32, 0.39);
+            }
+        }
+    }
+    position: relative;
+    z-index: 1;
+    height: 6rem;
+
+    button {
+        font-weight: 700;
+        height: 3rem;
+        overflow: hidden;
+        padding: 0 3rem;
+        text-overflow: ellipsis;
+        width: 18rem;
+    }
+    
+    .navbar-nav {
+        .nav-link-text {
+            font-size: 16px;
+            font-weight: 500;
+            color: black;
+            cursor: pointer;
+        }
+    }
+    
+    .navbar-brand {
+        img {
+            height: 82px;
+        }
+    }
+    
+    button {
+        font-family: 'Luckiest Guy', cursive;
+        padding: 20px 68px;
+        color: #ffffff;
+        font-size: 21px;
+        border: none;
+        background-image: repeating-linear-gradient(180deg, #FEA715, #FA7D00 100%);
+        white-space: nowrap;
+    }
+}
+
+
+.connectWallet {
+    margin-left: 12rem;
+    color: #FEA715;
+    white-space: nowrap;
+}
+
+.banner {
+    position: relative;
+    top: -6rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    max-width:  90.125rem;
+    height: 41.4375rem;
+
+    .btn {
+        font-family: 'Luckiest Guy', cursive;
+        padding: 20px 68px;
+        color: #ffffff;
+        font-size: 21px;
+        border: none;
+        border-radius: 0;
+        background-image: repeating-linear-gradient(180deg, #FEA715, #FA7D00 100%);
+        white-space: nowrap;
+    }
+}
+
+.description {
+    background-color: #fff;
+    color: #333333;
+    max-width: 926px;
+    padding : 0 12px;
+    margin: 0 auto 89px;
+    font-family: 'Lato';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 33px;
+    position: relative;
+    text-align: center;
+    top: -16px;
+}
+
+.roadmap {
+    color: #333333;
+    background-color: #FBE2E2;
+    position: relative;
+    // padding: 62px 90px 0 269px;
+    margin: auto;
+    max-width: 926px;
+    padding: 0 12px;
+
+    // @include media-breakpoint-down(md) {
+    //     padding: 0 50px;
+    // }
+    .roadmap-title {
+        color: #333333;
+        font-family: 'Lora';
+        font-weight: 500;
+        font-size: 44px;
+        line-height: 56px;
+        text-align: left; 
+        padding-bottom: 0.5rem;
+    }
+
+    .roadmap-overview {
+        color: #333333;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        padding-bottom: 2rem;
+    }
+    .story {
+        padding-bottom: 30px;
+
+        .story-title {
+            font-family: 'Inter';
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 17px;  
+            margin-bottom: 0.3rem;
+        }
+    
+        .story-content {
+            color:#333333;
+            font-family: 'Inter';
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 23px;
+            margin-bottom: 0;
+        }
+    }
+    
+    .wrapper {
+        position: absolute;
+        bottom: 0;
+        top: 0;
+        left: -3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+        @include media-breakpoint-down(sm) {
+            display: none;
+        }
+      }
+      
+      .timeline {
+        height: 100%;
+        width: 3px;
+      }
+      
+      .square {
+        border-radius: 100%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 16px;
+        height: 16px;
+        z-index: 1;
+      }
+      
+      .squareWrapper {
+        position: relative;
+        margin-bottom: -1rem;
+      }
+
+      .woman-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+}
+
+.mission {
+    max-width: 902px;
+    padding: 0 12px;
+    margin: 76px auto;
+    background-color: #fff;
+    position: relative;
+    
+    .mission-title {
+        font-family: 'Lora';
+        font-weight: 500;
+        font-size: 44px;
+        line-height: 56px;
+        padding-bottom: 1rem;
+        text-align: center;
+    }
+
+    .mission-content {
+        font-family: 'Lato';
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 26px;
+        text-align: center;
+        color: #333333;
+    }
+}
+
+.team {
+    background-color: #fff;
+    margin: 76px auto 149px;
+    padding: 0 12px;
+    position: relative;
+    max-width: 902px;
+
+    .user-avatar{
+        position: relative;
+        width: min-content;
+        .user-img {
+            position: absolute;
+            top: 50%;
+            right: 50%;
+            transform: translate(50%, -50%);
+        }
+    }
+
+    .owner {
+        padding-top: 3rem;
+    }
+
+    .role {
+        color: rgba(51, 51, 51, 0.6);
+        font-family: 'Lato';
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        text-transform: uppercase;
+    }
+
+    .members {
+        margin-top: 63.9px;
+    }
+
+    .name-surname {
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 26px;
+        text-transform: capitalize;
+    }
+
+    .content {
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 26px;
+    }
+}
+
+.divide {
+    position: absolute;
+    top: 47%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    &:before {
+        content: "";
+        display: inline-block;
+        width: 51%;
+        height: 1px;
+        background-color: rgba($color: #ffffff, $alpha: 0.7);
+    }
+
+    &:after {
+        content: "";
+        display: inline-block;
+        width: 49%;
+        height: 3px;
+        background-color: #ffffff;
+    }
+}
+
+// product//
+.product {
+    padding: 0.42rem;
+
+    img {
+        width: 100%;
+    }
+
+    .loading-image {
+        height:100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+// about//
+.about-section {
+    position: relative;
+    padding: 165px 0;
+
+    .about-bg {
+        position: absolute;
+        left: 3%;
+        top: 20%;
+
+        @include media-breakpoint-down(lg) {
+            top: 1%;
+        }
+    }
+
+    .title {
+        margin-bottom: 6.875rem !important;
+    }
+
+    img {
+        margin-bottom: 6rem;
+    }
+
+    @include media-breakpoint-down(lg) {
+        padding: 50px 0;
+
+        .title {
+            margin-bottom: 1.875rem !important;
+        }
+    }
+}
+
+// teams //
+.teams {
+    position: relative;
+    padding: 11.25rem 0;
+
+    .team {
+        margin-bottom: 1.875rem;
+
+        img {
+            margin-bottom: 40px;
+            width: 100%;
+        }
+
+        h4 {
+            margin-bottom: 15px !important;
+        }
+    }
+
+    @include media-breakpoint-down(lg) {
+        padding: 5rem 0;
+    }
+}
+
+//community//
+.community {
+    padding: 7rem 0;
+    
+    .btn {
+        font-family: 'Luckiest Guy', cursive;
+        padding: 20px 68px;
+        color: #ffffff;
+        font-size: 21px;
+        border: none;
+        border-radius: 0;
+        background-image: repeating-linear-gradient(180deg, #FEA715, #FA7D00 100%);
+        white-space: nowrap;
+    }
+
+    img {
+        @include media-breakpoint-down(lg) {
+            max-width: 100%;
+            padding: 3rem 0;
+        }
+    }
+}
+
+// Footer //
+footer {
+    padding: 6rem 0;
+
+    ul {
+        li {
+            list-style: none;
+        }
+    }
+
+    .navbar-brand {
+        @include media-breakpoint-up(lg) {
+            margin-left: 11rem;
+        }
+    }
+
+    .footer-links {
+        li {
+            list-style: none;
+            margin-bottom: 1rem;
+
+            a {
+                font-size: 16px;
+                font-weight: 500;
+                color: #ffffff !important;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .social {
+        li {
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 2.5rem;
+                height: 2.5rem;
+                background-color: rgba($color: #282B2F, $alpha: 0.5);
+                transform: rotate(45deg);
+
+                img {
+                    transform: rotate(315deg);
+                }
+            }
+        }
+    }
+
+    p {
+        font-size: 16px;
+        color: #ffffff;
+    }
+}
+
+
+
+
+  .mint-ticket {
+      padding: 5rem 3rem;
+      margin: auto;
+
+      input {
+        width: 3.5rem;
+        height: 3.5rem;
+        font-size: 3rem;
+        font-family: 'Luckiest Guy', cursive;       
+      }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+      button {
+          padding: 0 1.5rem;
+      }
+  }
